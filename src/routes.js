@@ -22,11 +22,17 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
+import UserList from "views/examples/UserList";
 
 var routes = [
   {
+    path: "/login",
+    component: Login,
+    layout: "/auth",
+  },
+  {
     path: "/index",
-    name: "Dashboard",
+    name: "Bảng điều khiển",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",
@@ -36,6 +42,13 @@ var routes = [
     name: "Icons",
     icon: "ni ni-planet text-blue",
     component: Icons,
+    layout: "/admin",
+  },
+  {
+    path: "/userList",
+    name: "Quản lý nhân viên",
+    icon: "ni ni-single-02 text-yellow",
+    component: UserList,
     layout: "/admin",
   },
   {
@@ -58,13 +71,6 @@ var routes = [
     icon: "ni ni-bullet-list-67 text-red",
     component: Tables,
     layout: "/admin",
-  },
-  {
-    path: "/login",
-    name: "Login",
-    icon: "ni ni-key-25 text-info",
-    component: Login,
-    layout: "/auth",
   },
   {
     path: "/register",
